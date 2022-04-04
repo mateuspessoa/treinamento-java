@@ -10,7 +10,5 @@ public class ClienteDTO {
 	
 	private String email;
 	
-	private String agencia;
-	
 
 }

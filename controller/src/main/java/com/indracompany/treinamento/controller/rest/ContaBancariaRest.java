@@ -45,13 +45,13 @@ public class ContaBancariaRest extends GenericCrudRest<ContaBancaria, Long, Cont
 	
 	@PutMapping(value = "/deposito", produces = MediaType.APPLICATION_JSON_VALUE)
 	public @ResponseBody ResponseEntity<Void> depositar(@RequestBody DepositoDTO dto){
-		contaBancariaService.depositar(dto.getAgencia(), dto.getNumeroConta(), dto.getValor(), "Depositar");
+		contaBancariaService.depositar(dto.getAgencia(), dto.getNumeroConta(), dto.getValor());
 		return new ResponseEntity<Void>(HttpStatus.OK);
 	}
 	
 	@PutMapping(value = "/saque", produces = MediaType.APPLICATION_JSON_VALUE)
 	public @ResponseBody ResponseEntity<Void> sacar(@RequestBody SaqueDTO dto){
-		contaBancariaService.sacar(dto.getAgencia(), dto.getNumeroConta(), dto.getValor(), "Sacar");
+		contaBancariaService.sacar(dto.getAgencia(), dto.getNumeroConta(), dto.getValor());
 		return new ResponseEntity<Void>(HttpStatus.OK);
 	}
 	
