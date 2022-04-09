@@ -1,6 +1,9 @@
 import { HttpClient } from '@angular/common/http';
-import { Injectable } from '@angular/core';
+import { Injectable, OnInit } from '@angular/core';
 import { environment } from 'src/environments/environment';
+import { ISaqueDeposito } from './../interfaces/saque-deposito';
+import { IConta } from './../interfaces/contas';
+import { Observable } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -12,5 +15,13 @@ export class ContasService {
 
   listarTodasContas() {
     return this.http.get(`${this.api}/${this.endpoint}/`)
+  }
+
+  saque(saque: ISaqueDeposito): Observable<any> {
+    return this.http.put<IConta>(`${this.api}/${this.endpoint}/saque`, saque);
+  }
+
+  save(dados: IConta):Observable<any>{
+    return this.http.post<IConta>(`${this.api}`, dados);
   }
 }
