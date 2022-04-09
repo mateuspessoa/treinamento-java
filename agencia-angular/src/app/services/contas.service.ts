@@ -21,6 +21,10 @@ export class ContasService {
     return this.http.put<IConta>(`${this.api}/${this.endpoint}/saque`, saque);
   }
 
+  deposito(deposito: ISaqueDeposito): Observable<any> {
+    return this.http.put<IConta>(`${this.api}/${this.endpoint}/deposito`, deposito);
+  }
+
   save(dados: IConta):Observable<any>{
     return this.http.post<IConta>(`${this.api}`, dados);
   }

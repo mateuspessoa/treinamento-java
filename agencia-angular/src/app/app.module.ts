@@ -11,6 +11,8 @@ import { HomeComponent } from './pages/home/home.component';
 import { CadastroComponent } from './pages/cadastro/cadastro.component';
 import { SaqueComponent } from './pages/saque/saque.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { DepositoComponent } from './pages/deposito/deposito.component';
+import { TransferenciaComponent } from './pages/transferencia/transferencia.component';
 
 @NgModule({
   declarations: [
@@ -21,6 +23,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     HomeComponent,
     CadastroComponent,
     SaqueComponent,
+    DepositoComponent,
+    TransferenciaComponent,
   ],
   imports: [
     BrowserModule,

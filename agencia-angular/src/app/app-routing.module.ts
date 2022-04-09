@@ -5,6 +5,8 @@ import { ContasComponent } from './pages/contas/contas.component';
 import { HomeComponent } from './pages/home/home.component';
 import { CadastroComponent } from './pages/cadastro/cadastro.component';
 import { SaqueComponent } from './pages/saque/saque.component';
+import { DepositoComponent } from './pages/deposito/deposito.component';
+import { TransferenciaComponent } from './pages/transferencia/transferencia.component';
 
 const routes: Routes = [
 
@@ -22,6 +24,12 @@ const routes: Routes = [
   },
   {
     path: 'saque', component: SaqueComponent
+  },
+  {
+    path: 'deposito', component: DepositoComponent
+  },
+  {
+    path: 'transferencia', component: TransferenciaComponent
   }
 ];
 
