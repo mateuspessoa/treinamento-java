@@ -13,6 +13,8 @@ import { SaqueComponent } from './pages/saque/saque.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { DepositoComponent } from './pages/deposito/deposito.component';
 import { TransferenciaComponent } from './pages/transferencia/transferencia.component';
+import { ClientesCadastrarEditarComponent } from './pages/clientes/clientes-cadastrar-editar/clientes-cadastrar-editar.component';
+
 
 @NgModule({
   declarations: [
@@ -25,6 +27,8 @@ import { TransferenciaComponent } from './pages/transferencia/transferencia.comp
     SaqueComponent,
     DepositoComponent,
     TransferenciaComponent,
+    ClientesCadastrarEditarComponent
+
   ],
   imports: [
     BrowserModule,

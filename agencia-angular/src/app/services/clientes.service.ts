@@ -13,10 +13,26 @@ export class ClientesService {
   constructor(private http: HttpClient) { }
 
   listarTodosClientes() {
-    return this.http.get(`${this.api}/${this.endpoint}/`);
+    return this.http.get<ICliente[]>(`${this.api}/${this.endpoint}/`);
   }
 
   postClient(body: ICliente): Observable<any>{
     return this.http.post(`${this.api}`, body);
   }
+
+  cadastrar(cliente: ICliente) {
+    return this.http.post(`${this.api}/${this.endpoint}/`, cliente);
+  }
+
+  remover(id: number) {
+    return this.http.delete(`${this.api}/${this.endpoint}/${id}`)
+  }
+
+  //SERVE PARA BUSCAR O O ID PARA EDITAR
+
+  buscarPorId(id: number): Observable<ICliente> {
+    return this.http.get<ICliente>(`${this.api}/${this.endpoint}/${id}`)
+  }
 }
+
+

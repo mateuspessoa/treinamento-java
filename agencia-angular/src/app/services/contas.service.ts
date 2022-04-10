@@ -4,6 +4,7 @@ import { environment } from 'src/environments/environment';
 import { ISaqueDeposito } from './../interfaces/saque-deposito';
 import { IConta } from './../interfaces/contas';
 import { Observable } from 'rxjs';
+import { ITransferencia } from '../interfaces/transferencia';
 
 @Injectable({
   providedIn: 'root'
@@ -23,6 +24,10 @@ export class ContasService {
 
   deposito(deposito: ISaqueDeposito): Observable<any> {
     return this.http.put<IConta>(`${this.api}/${this.endpoint}/deposito`, deposito);
+  }
+
+  transferencia(transferencia: ITransferencia) {
+    return this.http.put<IConta>(`${this.api}/${this.endpoint}/transferencia`, transferencia);
   }
 
   save(dados: IConta):Observable<any>{

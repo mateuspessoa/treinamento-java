@@ -7,6 +7,7 @@ import { CadastroComponent } from './pages/cadastro/cadastro.component';
 import { SaqueComponent } from './pages/saque/saque.component';
 import { DepositoComponent } from './pages/deposito/deposito.component';
 import { TransferenciaComponent } from './pages/transferencia/transferencia.component';
+import { ClientesCadastrarEditarComponent } from './pages/clientes/clientes-cadastrar-editar/clientes-cadastrar-editar.component';
 
 const routes: Routes = [
 
@@ -30,6 +31,12 @@ const routes: Routes = [
   },
   {
     path: 'transferencia', component: TransferenciaComponent
+  },
+  {
+    path: 'clientes/cadastrar', component: ClientesCadastrarEditarComponent
+  },
+  {
+    path: 'clientes/editar/:id', component: ClientesCadastrarEditarComponent
   }
 ];
 

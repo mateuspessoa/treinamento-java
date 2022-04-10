@@ -4,5 +4,5 @@ export interface ICliente {
   cpf: string;
   email: string;
   observacoes: string;
-  ativo: boolean;
+  ativo?: boolean;
 }

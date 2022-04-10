@@ -13,7 +13,7 @@
         <th scope="col">CPF</th>
         <th scope="col">E-mail</th>
         <th scope="col">Observações</th>
-        <th scope="col">Excluir</th>
+        <th scope="col">Ações</th>
       </tr>
     </thead>
     <tbody>
@@ -23,12 +23,22 @@
         <td>{{ cliente.cpf }}</td>
         <td>{{ cliente.email }}</td>
         <td>{{ cliente.observacoes }}</td>
-        <td><button class="excluir">X</button></td>
+        <td>
+          <div class="dropdown">
+            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+              Ações
+            </button>
+            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+              <li><a class="dropdown-item" [routerLink]="['editar', cliente.id]">Editar</a></li>
+              <li><a class="dropdown-item" (click)="confirmar(cliente.id)">Remover</a></li>
+            </ul>
+          </div>
+        </td>
       </tr>
     </tbody>
   </table>
 </div>
 
 <div class="section-2">
-  <a routerLink="/cadastro"><button>Cadastar Cliente</button></a>
+  <a routerLink="/clientes/cadastrar"><button>Cadastar Cliente</button></a>
 </div>
